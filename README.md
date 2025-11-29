@@ -41,9 +41,10 @@ project-root/
 │  └─ README.md                    # (optional) frontend-specific notes
 ├─ package.json                    # root meta/package (optional)
 └─ README.md                       # this file
+```
 
-Milestone Completion Status
--> Core Backend Milestones
+## Milestone Completion Status
+-> **Core Backend Milestones**
 
 Dynamic Form Schema API
 
@@ -64,7 +65,7 @@ In-memory storage
 
 Submissions stored in an in-memory array via dataStore.js.
 
--> Optional / Bonus Backend Features
+-> **Optional / Bonus Backend Features**
 
 Update submission
 
@@ -79,7 +80,7 @@ Search / filter
 GET /api/submissions?search=query
 Simple case-insensitive search across ID and all field values.
 
--> Core Frontend Milestones
+-> **Core Frontend Milestones**
 
 Dynamic form rendering
 
@@ -97,7 +98,7 @@ Submissions list
 
 Separate Submissions tab shows paginated list of submissions with Created At sorting.
 
--> Optional / Bonus Frontend Features
+-> **Optional / Bonus Frontend Features**
 
 View / Edit / Delete submission
 
@@ -115,15 +116,9 @@ Debounced search
 
 “Search (debounced)…” input on submissions page; 400ms debounce to avoid extra requests.
 
-Dark mode
 
-Toggle in header; adds dark class on <body> and switches Tailwind styles.
 
-Responsive layout
-
-Works on desktop and tablet widths; table area scrolls horizontally if needed.
-
-Tech Stack Used
+## Tech Stack Used
 Backend
 
 Node.js + Express
@@ -150,7 +145,7 @@ Axios for HTTP requests
 
 Tailwind CSS for styling and light/dark themes
 
-Setup and Run Instructions
+## Setup and Run Instructions
 Prerequisites
 
 Node.js 18+
@@ -225,7 +220,7 @@ http://localhost:5173
 
 You should see the Dynamic Form Builder UI and the form schema should load from the backend.
 
-4. Production Deployments (what is already done)
+## Production Deployments
 Backend deployed to Render:
 https://form-builder-grfh.onrender.com
 
@@ -256,7 +251,7 @@ No advanced error UI
 
 Errors are shown inline per field and via simple text messages.
 
-Assumptions
+## Assumptions
 Only one form schema is required; no schema management UI needed.
 
 In-memory data storage is acceptable for this assignment (no DB requirement).
