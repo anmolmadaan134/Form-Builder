@@ -14,7 +14,7 @@ import crypto from "crypto";
 const app = express();
 const PORT = 4000;
 
-// allow both 5173 & 5174 for convenience
+
 app.use(
   cors({
     origin: ["http://localhost:5173", "http://localhost:5174","https://form-builder-chi-seven.vercel.app"]
@@ -22,12 +22,12 @@ app.use(
 );
 app.use(express.json());
 
-// ---------- SCHEMA ----------
+
 app.get("/api/form-schema", (req, res) => {
   res.json(employeeOnboardingSchema);
 });
 
-// ---------- CREATE ----------
+
 app.post("/api/submissions", (req, res) => {
   const data = req.body || {};
   const errors = validateSubmission(employeeOnboardingSchema, data);
@@ -57,7 +57,7 @@ app.post("/api/submissions", (req, res) => {
   });
 });
 
-// ---------- READ (LIST + SEARCH/FILTER) ----------
+
 app.get("/api/submissions", (req, res) => {
   const page = Number(req.query.page ?? 1);
   const limit = Number(req.query.limit ?? 10);
@@ -67,7 +67,7 @@ app.get("/api/submissions", (req, res) => {
 
   let all = getSubmissions();
 
-  // simple text search across id and all field values
+  
   if (search) {
     all = all.filter((s) => {
       if (s.id.toLowerCase().includes(search)) return true;
@@ -120,7 +120,7 @@ app.get("/api/submissions", (req, res) => {
   });
 });
 
-// ---------- UPDATE ----------
+
 app.put("/api/submissions/:id", (req, res) => {
   const id = req.params.id;
   const existing = getSubmissionById(id);

@@ -43,7 +43,7 @@ export default function SubmissionsPage() {
   });
 
   const [editing, setEditing] = useState(null);
-  const [viewing, setViewing] = useState(null); // ✨ NEW
+  const [viewing, setViewing] = useState(null); 
 
   const deleteMut = useMutation({
     mutationFn: deleteSubmission,
@@ -145,7 +145,7 @@ export default function SubmissionsPage() {
         }}
         onSortToggle={handleSortToggle}
         onEdit={(submission) => {
-          setViewing(null);     // don’t show both at once
+          setViewing(null);     
           setEditing(submission);
         }}
         onDelete={(id) => {
@@ -154,12 +154,12 @@ export default function SubmissionsPage() {
           }
         }}
         onView={(submission) => {
-          setEditing(null);     // don’t show both at once
+          setEditing(null);    
           setViewing(submission);
         }}
       />
 
-      {/* EDIT MODAL (unchanged) */}
+      
       {editing && schema && (
         <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center">
           <div className="w-full max-w-xl bg-white dark:bg-slate-800 rounded-lg shadow-xl overflow-hidden">
@@ -211,7 +211,7 @@ export default function SubmissionsPage() {
         </div>
       )}
 
-      {/* VIEW MODAL ✨ */}
+      
       {viewing && (
         <SubmissionViewModal
           open={!!viewing}

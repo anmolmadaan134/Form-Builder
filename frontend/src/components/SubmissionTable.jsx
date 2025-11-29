@@ -52,7 +52,7 @@ export default function SubmissionTable({
           <div className="flex gap-2 text-xs">
             <button
               type="button"
-              onClick={() => onView(submission)}  // ✨ VIEW
+              onClick={() => onView(submission)} 
               className="px-3 py-1 rounded-md border border-slate-300 text-slate-700 hover:bg-slate-100"
             >
               View
