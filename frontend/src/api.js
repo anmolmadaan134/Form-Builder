@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "https://matbook-backend.onrender.com/api"
+  baseURL: "https://form-builder-grfh.onrender.com/api"
 });
 
 export async function fetchFormSchema() {
