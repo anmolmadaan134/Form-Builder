@@ -17,7 +17,7 @@ const PORT = 4000;
 // allow both 5173 & 5174 for convenience
 app.use(
   cors({
-    origin: ["http://localhost:5173", "http://localhost:5174","https://form-builder-chi-seven.vercel.app/"]
+    origin: ["http://localhost:5173", "http://localhost:5174","https://form-builder-chi-seven.vercel.app"]
   })
 );
 app.use(express.json());
